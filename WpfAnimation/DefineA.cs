@@ -13,5 +13,10 @@ namespace WpfAnimation
 
         public DefineA()
         { }
+
+        public int Add()
+        {
+            return A + B;
+        }
     }
 }
