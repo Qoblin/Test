@@ -17,6 +17,7 @@ namespace WpfAnimation
         public int Add()
         {
             //add
+            //all sum
             return A + B;
         }
     }
