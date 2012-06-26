@@ -1,0 +1,25 @@
+﻿<Window x:Class="WpfAnimation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:fluid="clr-namespace:FluidKit.Controls;assembly=FluidKit"
+        Title="MainWindow"  >
+    <Window.RenderTransform>
+        <RotateTransform x:Name="rotate"></RotateTransform>
+    </Window.RenderTransform>
+    <Window.Resources>
+        <fluid:SlideTransition x:Key="CubeTransition" Duration="0:0:0.5"  ></fluid:SlideTransition>
+    </Window.Resources>
+    <Viewbox>
+        <Canvas  x:Name="thissss"  Width="1360" Height="768">
+            <fluid:TransitionPresenter Width="1360" Height="768" Canvas.Left="0" Canvas.Top="0" 
+                                       x:Name="_pageContainer"
+                                       Transition="{StaticResource CubeTransition}"
+                                       IsLooped="False"
+                                       RestDuration="0:0:0"
+                                       >
+                
+                
+            </fluid:TransitionPresenter>
+        </Canvas>
+    </Viewbox>
+</Window>
